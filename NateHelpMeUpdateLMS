@@ -1,0 +1,30 @@
+#! /bin/bash
+
+rm -rf ~/Downloads/wtc-lms
+
+echo "Please download the lastest version of wtc-lms from Slack/#02_lms_releases"
+sleep 3
+
+open https://wethinkcode-community.slack.com/archives/C01QPC5DLBA >/dev/null 2>&1
+echo 
+sleep 2
+echo "Press enter after downloading the latest version "
+read response
+
+if [ "$response" != "" ]
+then
+    echo "Don't do that."
+else
+    echo "Let's do that now."
+
+    chmod +x ~/Downloads/wtc-lms
+    sudo cp ~/Downloads/wtc-lms /usr/local/bin
+
+    if whereis wtc-lms | grep -q "/home/wtc/.local/bin/wtc-lms"; then
+        sudo cp ~/Downloads/wtc-lms /home/wtc/.local/bin
+    fi
+
+    echo -e "You have now upgraded to \c" 
+    wtc-lms -V
+fi
+    
