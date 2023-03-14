@@ -2,10 +2,13 @@
 This program solves a very simple problem. Actually it does not even solve a problem but rather a program of convenience. It makes the process of updating lms a quick and simple one with no need to look for/remember commands. 
 
 # Setup
-1. Firstly, allow the script to be executable by running the following command  
-```chmod +x ~/Downloads/NateHelpMeUpdateLMS```
-3. Secondly, move the file to the local bin where it will be treated like other executable programs by running the following command  
-```sudo mv ~/Downloads/NateHelpMeUpdateLMS /usr/local/bin/```
+1. Firstly, download the script to the ~/Downloads folder of your linux PC
+2. Secondly, allow the script to be executable by running the following command:  
+  ```chmod +x ~/Downloads/nate-update-lms```
+3. Lastly, move the file to the local bin where it will be treated like other executable programs by running the following command:    ```sudo mv ~/Downloads/nate-update-lms /usr/local/bin/```
+
+# How to Run the Program
+To run the script, sinply run the ```nate-update-lms```
 
 # How the Program works
 1. The program removes the "wtc-lms" file from the user's Downloads folder.
